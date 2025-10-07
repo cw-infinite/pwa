@@ -1,12 +1,7 @@
 // src/utils/dealsApi.js
 // Simulated API for cashback deals
 
-export const getCashbackDeals = () => {
-    // In a real app, this would be an API call
-    // For our demo, we'll return mock data
-    
-    // Let's create sample cashback deals for Bank of America
-    return [
+const cashbackDB = [
       {
         id: 1,
         merchant: 'Amazon',
@@ -157,7 +152,18 @@ export const getCashbackDeals = () => {
           startDate: '2025-02-01',
           expiryDate: '2025-07-31',
         },
-    ];
+];
+
+export const getCashbackDeal = (id) => {
+  return cashbackDB.find((cb) => cb.id === id);
+}
+
+export const getCashbackDeals = () => {
+    // In a real app, this would be an API call
+    // For our demo, we'll return mock data
+    
+    // Let's create sample cashback deals for Bank of America
+    return cashbackDB;
     // if (issuer === 'Bank of America') {
     // }
       

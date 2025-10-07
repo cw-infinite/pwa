@@ -30,7 +30,7 @@ const HomeScreen = () => {
 		style={styles.container}
 		behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
 	>
-    <Redirect href={'(tabs)'} />
+    {/* <Redirect href={'(auth)'} /> */}
 		<ScrollView contentContainerStyle={styles.scrollContent}>
 			<Text style={styles.title}>Enter Your Card Details</Text>
 			<Text style={styles.subtitle}>

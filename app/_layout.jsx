@@ -1,29 +1,10 @@
-import { Stack } from 'expo-router';
+import { Slot, Stack, useRouter } from 'expo-router';
+import { AuthProvider } from '@/lib/auth-context'
 
 export default function RootLayout() {
-
   return (
-      <Stack screenOptions={{
-        headerStyle: {
-          backgroundColor: '#ffffff',
-        },
-        headerTintColor: '#000000',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-        headerShown: false,
-
-      }}>
-        <Stack.Screen name="index" 
-
-          // screenOptions={{
-          //   headerShown: true,
-
-          // }}
-          options={{ 
-            headerShown: true,
-            title: 'BlankBack' }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+    <AuthProvider>
+      <Slot />
+    </AuthProvider>
   );
 }
