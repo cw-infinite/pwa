@@ -19,7 +19,7 @@ export default function RootLayout() {
   return (
       <Stack
               screenOptions={{
-                  headerShown: true,
+                  headerShown: false,
   
               }}>
           {/* Optionally configure static options outside the route.*/}

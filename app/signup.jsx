@@ -192,7 +192,7 @@ const SignUpScreen = () => {
         >
           {/* Header */}
           <View style={styles.header}>
-            <Text style={styles.appName}>Sharperk</Text>
+            <Text style={styles.appName}>Sharperks</Text>
             <Text style={styles.subtitle}>Create your account</Text>
           </View>
 
